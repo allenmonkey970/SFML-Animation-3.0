@@ -1,8 +1,8 @@
-### SFML Animation Manager
+# SFML Animation Manager
 
 This class provides an easy way to animate sprites in a game using the SFML Graphics library. The `AnimationManager` allows you to manage various animations for your game characters or objects. Below, you'll find a documentation and usage examples.
 
-#### Overview
+## Overview
 
 **Key Functions**:
 - **`addAnimation`**: Add a new animation.
@@ -11,9 +11,9 @@ This class provides an easy way to animate sprites in a game using the SFML Grap
 - **`deleteAnimation`**: Remove an animation.
 - **Setters**: Modify properties of animations (e.g., frequency, sprite size, sheet size, etc.).
 
-#### Example: Adding and Updating an Animation
+### Example: Adding and Updating an Animation
 
-##### Adding an Animation
+#### Adding an Animation
 First, you need to create an instance of the `AnimationManager` and add an animation. Here's how you can do it:
 
 ```cpp
@@ -33,7 +33,7 @@ AnimationManager am;
 am.addAnimation("Walking", animationSpritesheet, frameRectangle, spriteSize);
 ```
 
-##### Updating an Animation
+#### Updating an Animation
 To update the animation within your game loop, you can use the `update` method:
 
 ```cpp
@@ -75,7 +75,7 @@ am.setAnimationStartingIndex("Walking", sf::Vector2i(4, 4)); // Start frame
 am.setAnimationEndingIndex("Walking", sf::Vector2i(8, 4));   // End frame
 ```
 
-#### Full Usage with a Game Character
+## Full Usage with a Game Character
 
 Below is a snippet showing how to integrate `AnimationManager` with a game character class. The `Slime` class demonstrates setting up multiple animations and updating them.
 
@@ -126,7 +126,7 @@ private:
 };
 ```
 
-##### Main Game Loop
+#### Main Game Loop
 
 Here's a sample main loop that integrates the `Slime` class:
 
@@ -159,7 +159,7 @@ int main() {
 
 ---
 
-### Changes from Original Code by [Jfeatherstone](https://github.com/Jfeatherstone/SFMLAnimation/tree/master)
+## Changes from Original Code by [Jfeatherstone](https://github.com/Jfeatherstone/SFMLAnimation/tree/master)
 
 1. **Include Directives**:
    - The new code includes `#include "AnimationManager.h"` and `#include <iostream>` directives at the beginning, which were not present in the old code.
