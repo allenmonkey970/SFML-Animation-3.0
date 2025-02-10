@@ -142,11 +142,11 @@ int main() {
 
     while (window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
+        while (const std::optional<sf::Event> event = window.pollEvent()) {
+            if (event && event->is<sf::Event::Closed>())
+            {
                 window.close();
             }
-        }
 
         window.clear();
         mainSlime.draw(window); // Draw the slime with its current animation frame
